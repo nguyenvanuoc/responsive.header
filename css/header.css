@@ -1,0 +1,173 @@
+/*Var color*/
+/*______End var____*/
+/*___Reset_____*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; }
+
+/*___End Reset_____*/
+body {
+  font-size: 14px;
+  font-family: 'Roboto','Arial'; }
+
+/*Custom header*/
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0px 10px; }
+
+.header-menu {
+  background-color: #385296;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+  .header-menu .nav-toggle {
+    display: none; }
+  .header-menu .header-inner {
+    display: flex;
+    padding: 15px 0px;
+    align-items: center;
+    justify-content: space-between; }
+  .header-menu .logo {
+    width: 36px; }
+    .header-menu .logo img {
+      width: 100%; }
+  .header-menu .menus {
+    flex: 1;
+    margin: 5px 20px;
+    list-style: none; }
+    .header-menu .menus > li {
+      display: inline-block;
+      position: relative; }
+      .header-menu .menus > li > a {
+        padding: 7px 20px;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 20px;
+        display: block; }
+      .header-menu .menus > li:hover > a, .header-menu .menus > li > a:hover, .header-menu .menus > li.active > a {
+        background-color: rgba(255, 255, 255, 0.1); }
+      .header-menu .menus > li:hover > .menu-child {
+        display: block; }
+    .header-menu .menus a {
+      text-decoration: none; }
+    .header-menu .menus .menu-child {
+      display: none;
+      list-style: none;
+      margin: 0px;
+      position: absolute;
+      top: 100%;
+      padding: 0px;
+      min-width: 200px;
+      background-color: #fff;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
+      .header-menu .menus .menu-child a {
+        display: block;
+        padding: 7px 15px;
+        color: #000; }
+      .header-menu .menus .menu-child li:hover > a, .header-menu .menus .menu-child a:hover {
+        background-color: #f5f5f5;
+        color: #385296; }
+  .header-menu .menu-right .item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px; }
+  .header-menu .noti .icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: relative; }
+    .header-menu .noti .icon .dot {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      top: 2px;
+      right: 3px;
+      border-radius: 50%;
+      background-color: #FF9E0D; }
+    .header-menu .noti .icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
+  .header-menu .user .avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .header-menu .user .info {
+    display: inline-block;
+    color: #fff;
+    margin-left: 10px;
+    vertical-align: middle; }
+    .header-menu .user .info .name {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 3px; }
+    .header-menu .user .info .mail {
+      font-size: 12px;
+      font-weight: normal; }
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.1);
+  display: none; }
+  .overlay.show {
+    display: block; }
+
+/*Responsive Menu */
+@media (max-width: 768px) {
+  .header-menu .nav-toggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 7px; }
+    .header-menu .nav-toggle .bar {
+      height: 3px;
+      width: 100%;
+      display: block;
+      background: #fff;
+      margin: 5px 0px; }
+  .header-menu .menus {
+    position: fixed;
+    background: #385296;
+    top: 0px;
+    left: -100%;
+    bottom: 0px;
+    width: 200px;
+    margin: 0px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden; }
+    .header-menu .menus.show {
+      transition: all 0.3s ease;
+      opacity: 1;
+      left: 0;
+      visibility: visible; }
+    .header-menu .menus > li {
+      display: block; }
+      .header-menu .menus > li > a {
+        border-radius: 0px; }
+    .header-menu .menus .menu-child {
+      display: block;
+      position: relative;
+      top: 0px;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 0px 10px; }
+      .header-menu .menus .menu-child > li > a {
+        padding: 10px 20px;
+        color: #fff; }
+  .header-menu .menu-right {
+    flex: 1;
+    text-align: right; } }

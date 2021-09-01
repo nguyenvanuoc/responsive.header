@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header-menu">
+        <div class="container">
+            <div class="header-inner">
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <ul class="menus">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Products</a>
+                        <ul class="menu-child">
+                            <li><a href="#">Menu child 1</a></li>
+                            <li><a href="#">Menu child 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Abouts</a></li>
+                </ul>
+                <div class="menu-right">
+                    <div class="item noti">
+                        <span class="icon">
+                            <img src="img/icon-noti.svg" alt="">
+                            <span class="dot"></span>
+                        </span>
+                    </div>
+                    <div class="item user">
+                        <div class="avatar" style="background-image:url(img/avatar.png)">
+
+                        </div>
+                        <div class="info">
+                            <span class="name">Uoc Nguyen</span>
+                            <span class="mail">uocnv@vnpt.vn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="overlay"></div>
+
+
+    <!-- Javascript menu -->
+
+    <script>
+
+        $(".nav-toggle").click(function(){
+            $(".header-menu .menus").addClass("show");
+            $(".overlay").addClass("show");
+        });
+        $(".overlay").click(function(){
+            $(".header-menu .menus").removeClass("show");
+            $(this).removeClass("show");
+        });
+    </script>
+</body>
+</html>
